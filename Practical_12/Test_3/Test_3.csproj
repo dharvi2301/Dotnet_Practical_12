@@ -125,9 +125,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DesignationCount.cs" />
-    <Compile Include="Models\DesignationId.cs" />
+    <Compile Include="Models\Designation.cs" />
     <Compile Include="Models\Designations.cs" />
     <Compile Include="Models\Employee2.cs" />
+    <Compile Include="Models\EmployeeByDesignationIdViewModel.cs" />
     <Compile Include="Models\EmployeeDetailsViewModel.cs" />
     <Compile Include="Models\JoinTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

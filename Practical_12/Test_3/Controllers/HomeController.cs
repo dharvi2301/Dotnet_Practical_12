@@ -49,9 +49,7 @@ namespace Test_3.Controllers
                 cmd.Parameters.AddWithValue("@MobileNumber", "1234567890");
                 cmd.Parameters.AddWithValue("@Address", "Ahmedabad");
                 cmd.Parameters.AddWithValue("@Salary", 50000);
-                cmd.Parameters.AddWithValue("@DesignationId", 3);
-
-
+                cmd.Parameters.AddWithValue("@DesignationId", 1015);
 
                 connection.Open();
                 cmd.ExecuteNonQuery();
@@ -248,7 +246,7 @@ namespace Test_3.Controllers
                 {
                     employeeDetails.Add(new EmployeeDetailsViewModel
                     {
-                        Id = Convert.ToInt32(reader["Id"]),
+                        
                         FirstName = reader["FirstName"].ToString(),
                         MiddleName = reader["MiddleName"].ToString(),
                         LastName = reader["LastName"].ToString(),
@@ -272,7 +270,7 @@ namespace Test_3.Controllers
         }
 
         [HttpPost]
-        public ActionResult SpGetEmployeeByDesignationId(DesignationId idFeild)
+        public ActionResult SpGetEmployeeByDesignationId(Designation idFeild)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -281,12 +279,11 @@ namespace Test_3.Controllers
                 cmd.Parameters.AddWithValue("@DesignationId", Convert.ToInt32(idFeild.Identifier));
                 connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
-                List<EmployeeDetailsViewModel> employeeDetails = new List<EmployeeDetailsViewModel>();
+                List<EmployeeByDesignationIdViewModel> employeeDetails = new List<EmployeeByDesignationIdViewModel>();
                 while (reader.Read())
                 {
-                    employeeDetails.Add(new EmployeeDetailsViewModel
+                    employeeDetails.Add(new EmployeeByDesignationIdViewModel
                     {
-                        Id = Convert.ToInt32(reader["Id"]),
                         FirstName = reader["FirstName"].ToString(),
                         MiddleName = reader["MiddleName"].ToString(),
                         LastName = reader["LastName"].ToString(),

@@ -6,11 +6,9 @@ using System.Web;
 
 namespace Test_3.Models
 {
-	public class DesignationId
+	public class Designation
 	{
         [Required]
-        public int Id { get; set; }
-        [Required]
-        public string Identifier { get; set; }
+        public int Identifier { get; set; }
     }
 }

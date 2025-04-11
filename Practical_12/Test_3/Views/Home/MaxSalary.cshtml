@@ -18,7 +18,7 @@
                 {
                     foreach (var item in ViewBag.EmployeeName)
                     {
-                        <span class="text-danger">@item , </span>
+                        <span class="text-danger">@item </span>
                     }
                 }
                 else
@@ -28,7 +28,7 @@
             </div>
 
             <a href="@Url.Action("Index")" class="btn btn-primary fw-bold">
-                Back to Employee List
+                Back to List
             </a>
         </div>
     </div>

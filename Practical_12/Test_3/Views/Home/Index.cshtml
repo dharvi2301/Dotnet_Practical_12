@@ -1,49 +1,48 @@
-﻿﻿@model IEnumerable<Test_3.RouteConfig>
+﻿@model IEnumerable<Test_3.RouteConfig>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Dashboard";
 }
 
-
-
-
 <div class="container mt-5">
-    <div class="row">
-        <!-- Employee Record Section -->
-        <div class="col-md-6">
-            <div class="card shadow-lg">
-                <div class="card-header bg-primary text-white text-center">
-                    <h3>Employee Record</h3>
-                </div>
-                <div class="card-body text-center">
-                    <div class="d-flex flex-column gap-2">
-                        @Html.ActionLink("Add First Record to Employee", "InsertRecordEmployee", null, new { @class = "btn btn-success fw-bold w-100" })
-                       
-                        @Html.ActionLink("Join Two Tables", "JoinTable", null, new { @class = "btn btn-info fw-bold w-100" })
-                        @Html.ActionLink("Employee Details View", "EmployeeDetailsView", null, new { @class = "btn btn-info fw-bold w-100" })
-                        @Html.ActionLink("Sp Insert Data Ino Employee", "SpInsertDataEmployee", null, new { @class = "btn btn-danger fw-bold w-100" })
-                        @Html.ActionLink("More than One Emp in One Designation", "EmpInDesigMoreThanOne", null, new { @class = "btn btn-danger fw-bold w-100" })
-                        @Html.ActionLink("Sp to Get Employee Details", "SpGetEmployeeDetails", null, new { @class = "btn btn-success fw-bold w-100" })
-                        @Html.ActionLink("Maximun Salary Of Employee", "MaxSalary", null, new { @class = "btn btn-success fw-bold w-100" })
+    <div class="text-center mb-4">
+        <h2 class="fw-bold text-primary">Employee & Designation Dashboard</h2>
+        <p class="text-muted">Manage Employee and Designation records with stored procedures and views.</p>
+    </div>
 
+    <div class="row g-4">
+        <!-- Employee Section -->
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-lg h-100">
+                <div class="card-header bg-gradient text-white text-center" style="background: linear-gradient(to right, #0062E6, #33AEFF);">
+                    <h4 class="mb-0">🧑‍💼 Employee Operations</h4>
+                </div>
+                <div class="card-body px-4 py-3">
+                    <div class="d-grid gap-3">
+                        @Html.ActionLink("➕ Add Employee Records", "InsertRecordEmployee", null, new { @class = "btn btn-outline-success fw-bold" })
+                        @Html.ActionLink("🔗 Join Employee & Designation Tables", "JoinTable", null, new { @class = "btn btn-outline-warning fw-bold" })
+                        @Html.ActionLink("📄 Employee Details View", "EmployeeDetailsView", null, new { @class = "btn btn-outline-info fw-bold" })
+                        @Html.ActionLink("📥 Insert Using SP - Employee", "SpInsertDataEmployee", null, new { @class = "btn btn-outline-success fw-bold" })
+                        @Html.ActionLink("👥 Employees with Same Designation", "EmpInDesigMoreThanOne", null, new { @class = "btn btn-outline-warning fw-bold" })
+                        @Html.ActionLink("📊 Get Employee Details (SP)", "SpGetEmployeeDetails", null, new { @class = "btn btn-outline-info fw-bold" })
+                        @Html.ActionLink("💰 Highest Salary of Employee", "MaxSalary", null, new { @class = "btn btn-outline-success fw-bold" })
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Designation Section -->
-        <div class="col-md-6">
-            <div class="card shadow-lg">
-                <div class="card-header bg-secondary text-white text-center">
-                    <h3>Designation</h3>
+        <div class="col-lg-6">
+            <div class="card border-0 shadow-lg h-100">
+                <div class="card-header bg-gradient text-white text-center" style="background: linear-gradient(to right, #0062E6, #33AEFF);">
+                    <h4 class="mb-0">🏷️ Designation Operations</h4>
                 </div>
-                <div class="card-body text-center">
-                    <div class="d-flex flex-column gap-2">
-                        @Html.ActionLink("Add First Record To Designation", "InsertRecordDesignation", null, new { @class = "btn btn-success fw-bold w-100" })
-                        @Html.ActionLink("Count Designation", "CountDesignation", null, new { @class = "btn btn-success fw-bold w-100" })
-                        @Html.ActionLink("Sp Insert Data Into Designation", "SpInsertDataDesignation", null, new { @class = "btn btn-info fw-bold w-100" })
-                        @Html.ActionLink("Sp Get Employee By Designation Id", "SpGetEmployeeByDesignationId", null, new { @class = "btn btn-info fw-bold w-100" })
-                       
+                <div class="card-body px-4 py-3">
+                    <div class="d-grid gap-3">
+                        @Html.ActionLink("➕ Add Designation Records", "InsertRecordDesignation", null, new { @class = "btn btn-outline-success fw-bold" })
+                        @Html.ActionLink("🔢 Count Employees by Designation", "CountDesignation", null, new { @class = "btn btn-outline-warning fw-bold" })
+                        @Html.ActionLink("📥 Insert Using SP - Designation", "SpInsertDataDesignation", null, new { @class = "btn btn-outline-info fw-bold" })
+                        @Html.ActionLink("🔍 Find Employees by Designation Id", "SpGetEmployeeByDesignationId", null, new { @class = "btn btn-outline-success fw-bold" })
                     </div>
                 </div>
             </div>
