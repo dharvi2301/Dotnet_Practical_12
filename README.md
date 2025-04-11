@@ -22,7 +22,7 @@ This practical demonstrates the implementation of a basic Employee Records Manag
 ## Below are the outputs for the Test 3 project
 ![image](https://github.com/user-attachments/assets/ba78d41e-cbf3-48d2-8451-b183c1c6c597)
 ![image](https://github.com/user-attachments/assets/6425cfe3-df86-49ae-9f78-1b24273e8be0)
-![image](https://github.com/user-attachments/assets/16a58456-41bb-4d91-a06f-881b2da2f83b
+![image](https://github.com/user-attachments/assets/16a58456-41bb-4d91-a06f-881b2da2f83b)
 ![image](https://github.com/user-attachments/assets/3a6cea4f-7372-41d2-b68f-45ce22ead7d1)
 ![image](https://github.com/user-attachments/assets/3e500ddf-0d51-4c0e-839f-f13afd749a84)
 ![image](https://github.com/user-attachments/assets/eca6cfc8-24be-492c-b6e3-154c8536d34d
